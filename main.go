@@ -11,6 +11,7 @@ import (
 //USO go run main.go 2+3
 //USO go run maim.go 2-3
 //test CMP
+//test CMP2
 func main() {
 	fmt.Println("Calculadora 10%")
 
