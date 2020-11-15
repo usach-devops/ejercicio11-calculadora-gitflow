@@ -10,6 +10,7 @@ import (
 //USO go run calculadora.go 2*3
 //USO go run calculadora.go 2+3
 //USO go run calculadora.go 2-3
+//test CMP
 func main() {
 	fmt.Println("Calculadora 10%")
 
