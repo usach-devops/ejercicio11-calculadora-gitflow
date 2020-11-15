@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -19,8 +20,6 @@ func main() {
 
 	str1 := strings.Join(inputValue, " ")
 
-	fmt.Println(str1)
-
 	if strings.Contains(str1, "+") {
 		fmt.Println("Implementar Suma")
 	}
@@ -29,9 +28,16 @@ func main() {
 	}
 	if strings.Contains(str1, "*") {
 		res := strings.Split(str1, "*")
-		fmt.Println(res[0])
-		fmt.Println(getMultiplicar(3, 3))
+
+		value1, err := strconv.Atoi(res[0])
+		value2, err1 := strconv.Atoi(res[1])
+
+		if err != nil && err1 != nil {
+			fmt.Println(getMultiplicar(value1, value2))
+		}
+		fmt.Println(getMultiplicar(value1, value2))
 	}
+
 	if strings.Contains(str1, "/") {
 		fmt.Println("Implementar División")
 	}
