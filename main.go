@@ -21,7 +21,15 @@ func main() {
 	str1 := strings.Join(inputValue, " ")
 
 	if strings.Contains(str1, "+") {
-		fmt.Println("Implementar Suma")
+		res := strings.Split(str1, "+")
+
+		value1, err := strconv.Atoi(res[0])
+		value2, err1 := strconv.Atoi(res[1])
+
+		if err != nil && err1 != nil {
+			fmt.Println(getSumar(value1, value2))
+		}
+		fmt.Println(getSumar(value1, value2))
 	}
 
 	if strings.Contains(str1, "-") {
@@ -49,7 +57,16 @@ func main() {
 	}
 
 	if strings.Contains(str1, "/") {
-		fmt.Println("Implementar División")
+		res := strings.Split(str1, "/")
+
+		value1, err := strconv.Atoi(res[0])
+		value2, err1 := strconv.Atoi(res[1])
+
+		if err != nil && err1 != nil {
+			fmt.Println(getDivsion(value1, value2))
+		}
+		fmt.Println(getDivsion(value1, value2))
+
 	}
 }
 func getResta(value1 int, value2 int) int {
@@ -58,5 +75,16 @@ func getResta(value1 int, value2 int) int {
 
 func getMultiplicar(value1 int, value2 int) int {
 	return value1 * value2
+}
+
+
+
+func getSumar(value1 int, value2 int) int {
+	return value1 + value2
+}
+
+func getDivsion(value1 int, value2 int) int {
+	return value1 / value2
+
 }
 
